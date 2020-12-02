@@ -151,3 +151,72 @@ Number("100") + 42; // 142
 Number(true); // 1  in the low level programming universe they use binary, and 1 means yes 
 Number(false); // 0 means no in binary 
 */ 
+/* string functions in javascript  3 part video 
+var str = "The quick brown fox jumped over the lazy dog"; 
+str.length  the length of the String, and its an attribute of the string class 
+str.length(); // VM2349:1 Uncaught TypeError: str.length is not a function
+
+str.length; // 44
+
+str.charAt(2); // "e" this is a zero based index parameter for the charAt function 
+
+str.charAt(200); // "" this can be good , but confusing, because it means that the 200th index which means there is nothing at that index
+it would be better throwing an error than returning a "" at a noexistant index in the string 
+
+str.concat(' again and again'); // "The quick brown fox jumped over the lazy dog again and again" short for concatenate
+and will add this to the string  
+
+str; // "The quick brown fox jumped over the lazy dog"
+
+str.includes('quick'); // true
+
+str.endsWith('dog'); // true it doesnt check words, it checks character by character
+
+str.startsWith('Foo'); // false because foo isnt in the starting value will be useful with webscrapers etc 
+because it returns a true or false value  
+
+str.repeat(5); // "The quick brown fox jumped over the lazy dogThe quick brown fox jumped over the lazy dogThe quick brown fox jumped over the lazy dogThe quick brown fox jumped over the lazy dogThe quick brown fox jumped over the lazy dog"
+ allows you to repeat the string however many times you put in the parens it will repeat
+ const string = "My life without you i would die"
+ const new_string = string.repeat(5) + "/n"
+str.match(/((\(\d{3}\) ?)|(\d{3}-))?\d{3}-\d{4}/) // null
+
+'555-555-5555'.match(/((\(\d{3}\) ?)|(\d{3}-))?\d{3}-\d{4}/) // (4) ["555-555-5555", "555-", undefined, "555-", index: 0, input: "555-555-5555"]0: "555-555-5555"1: "555-"2: undefined3: "555-"index: 0input: "555-555-5555"length: 4__proto__: Array(0)
+
+str.replace('fox', 'wolf'); // "The quick brown wolf jumped over the lazy dog" takes 2 args what your searchin for is first, and what your replacing 2nd 
+would replace fox for wolf in the string , and it will only replace the first one 
+
+'555-555-5555 is my phone number'.search(/((\(\d{3}\) ?)|(\d{3}-))?\d{3}-\d{4}/) // 0 this is a regular expression, and looks very 
+weird, but its a pattern matching system , but dont let it scare you , and search will return what index value it is gonna be at for where it found it at 
+
+'Hi, 555-555-5555 is my phone number'.search(/((\(\d{3}\) ?)|(\d{3}-))?\d{3}-\d{4}/) // returns 4 and that means its at index of 4 
+if it returns -1 means that it didnt find it 
+
+str.indexOf('jumped'); // 20 means that its at index 20 , its at the index of the first word it finds 
+str
+str.lastIndexOf('jumped'); // 20 
+
+var str2 = str.concat('again and again');
+
+str2.indexOf('again'); // 44 this means its the first index of the again string and its at index 44 
+str2.lastIndexOf('again'); // 54 and the last index of the word again in the string, and will give you a range of where all of them are 
+
+str.slice(4, 10); // "quick " slices from index of 4 up to 10 brings back quick with the space if you slice(4, 9) itll bring back just "quick"
+
+str.slice(-8); // "lazy dog" will return from the end and back 8 indexs and returning from the index all the way to the right 
+
+str.slice(10); // "brown fox jumped over the lazy dog" slice with one value will slice all the way up to it 
+
+
+var messyString = '    Hi there    ';
+
+messyString.trim(); // "Hi there" clears up the whitespace in the messy string, and will allow you to clean up user
+data in the realworld 
+str.slice(4, 10).trim(); dont go past 3 or four functions on it , split them up if you need to 
+
+str.toUpperCase(); // "THE QUICK BROWN FOX JUMPED OVER THE LAZY DOG" takes all the words in the string and turn it to uppercase 
+
+str.toLowerCase(); // "the quick brown fox jumped over the lazy dog" takes it and turns whole string into lowercase
+
+
+*/
