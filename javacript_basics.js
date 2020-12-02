@@ -61,3 +61,93 @@ console.log(age)
 // make sure your updating your comments as your program develops, and every time update
 // make sure your the your modules, varnames, functions , and prettymuch keep your naming conventions
 // very descriptive 
+/* multiline comment
+in javascript 
+Javascript datatypes- is how js sees that types of data
+1. Boolean - only 2 outcomes True or False
+*/
+var truthy = true;
+var nottruthy = false;
+/* 2 null data type only one outcume is null 
+var nully = null; returns null or absence of a value none type 
+ 3. Undefinied - usually used with debugging, its simply declared , but has no value 
+ var notDefined; returns undefined not assigned a value to it 
+ 3. Number - number data types 
+ var age = 12; returns 12
+ 3 string datatype - strings 
+ var name = 'jacob' 
+ var nameTwo = "Jacob" for the most part it dont matter which one you use , until formatting data later on 
+ 4 Symobol - simalar to strings, only can be one of them , primarly for working with objects
+ var mySym = Symbol('foo) returns symbol , foo and bar and foobar is just a simple no meaning word and or a sample word has nothing special about it 
+ this is the full set of data types 
+*/ 
+/* Object in JavaScript 
+you will be using objects for everything everyday, and create a blueprint for your object, and able to query data easily 
+var user = { name: 'Kristine'}
+console.log(user.name) allows for dot notation and to access them by the objectName.keyvalue
+syntax is objectName = { key: value, key: value, key: { key: value, key: { key:value, key: value, etc }}} obj within a obj within a obj
+var user = {
+  name: 'Kristine',
+  age: 12,
+  city: 'Scottsdale',
+  grades: {
+    math: 90,
+    science: 80,
+    languageArts: 100
+  }
+}
+user.age = 13;
+user.grades.coding = 95; by doing this it will add the key of coding into the greades obj and set it to 95
+*/
+/* 
+quick ways to tell is a typeof each one 
+ypeof 12;
+// "number"
+
+typeof 'Astros';
+// "string"
+
+typeof true;
+// "boolean"
+
+typeof { name: "Kristine" };
+// "object"
+
+var age;
+// undefined
+
+typeof age;
+// "undefined"
+
+age = null;
+// null
+
+typeof age;
+// "object"
+*/
+/* Type Casting in Javascript
+one reason is js apps are api apps , and they will send numbers as strings because of json which is wrapping it 
+second reason is  you can do Number('100') + 42 = 142 , or if your not sure what type your data will be just wrap it into the 
+data type you want 
+"100" + 42; // "10042" because js doesnt know if were trying to append to it or a computation 
+42 + "100"; // "42100" doesnt have to do with order its the string plus a number 
+"100" - 42; // 58
+100 + null; // 100
+
+var ageOne = 12;
+String(ageOne); // '12' string class is making it a string  
+ageOne.toString(); // '12' number method to send it to a string , typically easier to use the .syntax is the goto 
+
+var ageTwo = '33';
+Number(ageTwo); // 33
+parseInt(ageTwo); // 33 will return 33.5 as 33
+parseFloat(ageTwo); // 33 will return for  '33.5' => 33.5 
++ ageTwo; // 33  the plus in front of the var will cast it into a int , its called the Uniary operator 
+will see it like this var foo = + ageTwo;
+parseInt('5555555555 is my phone number'); // 5555555555
+parseInt('foo 5555555555 is my phone number'); // returns NaN  which means not a number , which means it cant be converted
+Number("100") + 42; // 142
+
+Number(true); // 1  in the low level programming universe they use binary, and 1 means yes 
+Number(false); // 0 means no in binary 
+*/ 
