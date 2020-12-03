@@ -283,3 +283,10 @@ sum += gradeTwo; // 180
 
 sum *= gradeTwo; // 14400
 */ 
+total = 0;
+let gradeOne = total => {
+    for(i = 0; i < 10; i++){
+        total += i
+    }
+};
+return(gradeOne)
