@@ -1,5 +1,7 @@
 // closures in javascript, will take in everything we have talked about before
 // setters and getter functions kind of like it because it is getting the hits/bats, but getter and setter functions get raw data 
+// this is a hacky way of doing this, this was before oop in javascript, but still works and has its uses 
+// its just a pattern 
 function battingAverage () {
     var hits = 100
     var atBats = 300 // normally we will return a value but now 
@@ -14,7 +16,8 @@ function battingAverage () {
          atBats += atBat
      }
     }
-}
+} // your basically taking a function and returning a object, which alows you to manipulate the data with the dot notation kinda like a class 
+// and your maintaining that state of what your adding to it so by 
 
 var altuve = battingAverage()
 console.log(altuve.getCurrentAverage())
