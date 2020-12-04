@@ -5,13 +5,13 @@
    
 // }
 //   numberPopper() {
-//     this.start != this.start;
+//     this.start = !this.start;
 //     return this.start ? this.array.pop() : this.array.shift();
 //     }
 //   }
 
 // let arrayPopper = RemoveFrontOrBack([1,2,3,4,5]);
-// console.log(arrayPopper.);
+// console.log(arrayPopper.numberPopper());
 
 
 class ArrayPopper {
@@ -31,3 +31,11 @@ class ArrayPopper {
   console.log(ap.togglePopper());// 2
   console.log(ap.togglePopper());// 4
   console.log(ap.togglePopper()); //3
+
+  const arr = [1,2,3,4,5];
+  let flipSides = false;
+
+  funciton ArrayPopper() {
+      flipSides = !flipSides;
+      return flipSides ? arr.pop() : arr.shift();
+  }
