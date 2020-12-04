@@ -50,6 +50,6 @@ var players = [ // create the array of strings
   players.forEach(function(element) { // youll be entering in a element into the function, the element will be the index
     console.log(element); // much more functional, cause you calling a function on it 
   });
-  for (player of students){ // for of loops will skip over the and just grab the value of students and print it this is better for grabbing indexs and priting the values
+  for (player of students){ // for of loops will skip over the and just grab the value of students and print it this is better for grabbing indexs and printing
       console.log(student)
   }
