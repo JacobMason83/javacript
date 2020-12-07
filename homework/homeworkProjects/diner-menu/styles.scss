@@ -1,0 +1,188 @@
+@import url('https://cdn.wallpapersafari.com/33/50/lTpXNw.jpeg');
+
+html {
+  font-family: "Comic", sans-serif;
+}
+body {
+  margin: 0px;
+  background: url('https://cdn.wallpapersafari.com/33/50/lTpXNw.jpeg');
+}
+.nav-bar {
+  background: black;
+  color: white;
+}
+// .nav-bar div {
+//   display: none;
+// }
+.toggle {
+  display: inline-block;
+}
+.nav-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.links-wrapper {
+  margin: 0px;
+  width: 90%;
+  text-align: center;
+  padding: 1em;
+  color: white;
+  -webkit-box-shadow: #FFF 0 -1px 4px, #ff0 0 -2px 10px, #ff8000 0 -10px 20px, red 0 -18px 40px, 10px 5px 15px 5px rgba(255,255,255,0); 
+  box-shadow: #FFF 0 -1px 4px, #ff0 0 -2px 10px, #ff8000 0 -10px 20px, red 0 -18px 40px, 10px 5px 15px 5px rgba(255,255,255,0);
+}
+ul {
+    display: flex;
+    justify-content: center;
+}
+.links {
+  display: block;
+  text-align: center;
+  padding: 1em;
+  text-decoration: none;
+  background: black;
+  color: white;
+}
+.links:hover,
+.links:active {
+  color: black;
+  background:#ff8000;
+}
+
+.links a {
+  text-decoration: none;
+}
+.toggle {
+  padding: 1em;
+  color: black;
+}
+
+.breakbtn,
+.lunchbtn,
+.dinnerbtn,
+.dropbtn {
+    background-color: #ff8000;
+    width:10em;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+  }
+.breakbtn:hover, .breakbtn:focus,
+.lunchbtn:hover, .lunchbtn:focus,
+.dinnerbtn:hover, .dinnerbtn:focus,
+.dropbtn:hover, .dropbtn:focus {
+    background-color: black;
+  }
+  .breakfast,
+  .lunch,
+  .dinner, 
+.dropdown {
+    position: relative;
+    display: inline-block;
+  }
+.breakContent{
+    display: none;
+    position: absolute;
+    background-color: black;
+    min-width: 160px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;  
+}
+.lunchContent {
+    display: none;
+    position: absolute;
+    background-color: black;
+    min-width: 160px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 2;    
+}
+.dinnerContent {
+    display: none;
+    position: absolute;
+    background-color: black;
+    min-width: 160px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 3;  
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: black;
+    min-width: 160px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 0;
+  }
+ 
+.dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  .breakbtn a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  .lunchbtn a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }.dinnerbtn a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+.dropdown a:hover {background-color: #ddd;}
+.heros-section{
+    color:white;
+}
+.show {display: block;}
+.display{display: inline-block;}
+
+@media (max-width: 48em) {
+    ul {
+        display: block;
+    }
+}
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+//   <div class="dropdown">
+//   <button onclick="myFunction()" class="dropbtn">Dropdown</button>
+//   <div id="myDropdown" class="dropdown-content">
+//     <a href="#home">Home</a>
+//     <a href="#about">About</a>
+//     <a href="#contact">Contact</a>
+//   </div>
+// </div>

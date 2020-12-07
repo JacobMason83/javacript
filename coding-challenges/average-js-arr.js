@@ -22,3 +22,13 @@ function average(array) {
 
  let arr = [1,2,3,4,5,6]
  console.log(average(arr))
+
+ // with reduce 
+ const averageArr = (arr) => {
+    const reduce = arr.reduce((total, amount) => total + amount)
+    return reduce / arr.length
+  }
+  
+  let arr1 = [1,2,3,4,5,6]
+  
+  console.log(averageArr(arr1))// i figured out all three ways of doing it 
