@@ -29,3 +29,54 @@ class Instructor {
   const brayden = new Instructor({name: 'Brayden', role: 'teacher'}); // adding a new instance of instructor name brayden and teacher
   jon.renderDetails(); // returns jon snow assistant
   brayden.renderDetails(); // returns brayden role teacher 
+
+  // can use classes for functions with static methods as a helper class 
+  class StringFomatter {
+      static add(x, y){
+          return x + y
+      }
+      static camelCase(string){
+        return string
+    } // examples of it 
+}
+  }
+// class should be responsible for only one thing not multiple things 
+  class Instructor { // starting the class instructor 
+    constructor({ name, role = "assistant" }) {
+      this.role = role; // setting the variables for the class / data for it 
+      this.name = name;
+    }
+  
+    // Instance method
+    renderDetails() { // an method of the created instance that you make 
+      console.log(`${this.name} - ${this.role}`);
+    }
+  
+    // Base case static method
+    static helloWorld() {
+      console.log('Hi there');
+    }
+  
+    // Static method
+    static canTeach(instructor) { // this tells you that it takes the instuctor instance as argument/parameters
+      return (instructor.role === 'classroom');
+    }
+  }
+  
+  let juniorInstructor = new Instructor({ 'name' : 'Brian' });
+  let seniorInstructor = new Instructor({ 'name' : 'Alice', "role" : "classroom" });
+  
+  juniorInstructor.renderDetails(); // "Brian - assistant"
+  seniorInstructor.renderDetails(); // "Alice - classroom"
+  
+  Instructor.helloWorld(); // "Hi there"
+  
+  // "Brian can teach: false"
+  console.log(
+    `${juniorInstructor.name} can teach: ${Instructor.canTeach(juniorInstructor)}`
+  );
+  
+  // "Alice can teach: true"
+  console.log(
+    `${seniorInstructor.name} can teach: ${Instructor.canTeach(seniorInstructor)}`
+  );
