@@ -29,3 +29,14 @@ const hello = name => {console.log(`Hey there ${name}, damn you look georgeous t
 
 hello('babygirl');
 // aarow functions elvates the scope of the function 
+// aarow functions 
+function Invoice() {
+  this.taxRate = 0.06 // because js wasnt class oriented till a few years ago you can do this 
+  this.subTotal = subTotal
+  this.total = setInterval(function totalNumbers() {
+    console.log((this.taxRate * this.subTotal) + this.subTotal)
+  })
+}
+
+const inv = new Invoice();
+console.log(inv) // this is just a object 

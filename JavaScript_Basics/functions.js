@@ -63,3 +63,19 @@ function newObj (name ) {
         email: "jkkdl@kldkfn"
     }
 }
+// how to pass default values a function arguments
+const blog = {
+    title: 'My great post',
+    summary: 'Summary of my post'
+  }
+  
+  const openGraphMetadata = ({ title, summary = 'A DailySmarty Post' }) => { // same as python in this since where you know
+    //title will be there, but summary may not be so you can add the default value to it 
+    // backticks with multilines will be seen in react and angular so this is how to use it 
+    console.log(` 
+      og-title=${title}
+      og-description=${summary}
+    `);
+  }
+  
+  openGraphMetadata(blog); // it will return title and summary if its given , but if it isnt given then itll return a daily smarty post 
