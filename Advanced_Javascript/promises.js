@@ -146,3 +146,54 @@ async function loginActivities() {
 }
 
 loginActivities();
+// another example of async function and await 
+
+const sleep = ms => new Promise((resolve, reject) => setTimeout(resolve, ms))
+async function runLoop(){
+  const arr = ["a", "b'","c", "d"]
+  for (let i = 0 ; i < arr.length; i++){
+    await sleep(1000)
+    console.log(arr[i])
+  }
+}
+runLoop()
+
+// async and await to make sure of closures and ensure all processes have run and comeback at the same time
+
+const login = () => {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve('User logged in...');
+    }, 4000); // to prove it goes in the order that you want it to 
+  });
+}
+
+const updateAccount = () => {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve('Updating last login...');
+    }, 2000);
+  });
+}
+// im putting both functions into the async function loginActiviites, so that all the processes are complete
+async function loginActivities(login, updateAccount) {  
+  const returnedLogin = await login;
+  console.log(returnedLogin);
+
+  const returnedUpdateAccount = await updateAccount;
+  console.log(returnedUpdateAccount);
+}
+
+loginActivities(login(), updateAccount()); // running at the same time 
+
+async function queryApis() {
+  const postsPromise = fetch('https://api.dailysmarty.com/posts');
+  const posts = await postsPromise.then(res => res.json());
+  console.log(posts);
+
+  const reposPromise = fetch('https://api.github.com/users/jordanhudgens/repos'); // try this with my git hub 
+  const repos = await reposPromise.then(res => res.json());
+  console.log(repos);
+}
+
+queryApis();
