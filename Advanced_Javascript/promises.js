@@ -197,3 +197,38 @@ async function queryApis() {
 }
 
 queryApis();
+// added another way of doing this 
+async function swapiGetter() {
+  const swapiFetch = fetch("https://www.swapi.tech/api/people")
+  const swapiData = await swapiFetch.then(res => res.json())
+  
+  const gitFetch = fetch("https://api.github.com/users/JacobMason83/repos")
+  const gitData = await gitFetch.then(res => res.json())
+  
+  console.log(gitData)
+  console.log(swapiData)
+}
+swapiGetter()
+// try catch blocks 
+async function queryApis() {
+  try {
+    const postsPromise = fetch('http://api.dailysmarty.com/posts');
+    const posts = await postsPromise.then(res => res.json());
+    console.log(posts);
+  } catch(err) {
+    console.log(err);
+    console.log('There was an error with the DailySmarty API');
+  }
+
+  try {
+    const reposPromise = fetch('https://api.github.com/users/jordanhudgens/repos');
+    const repos = await reposPromise.then(res => res.json());
+    console.log(repos);
+  } catch(err) {
+    console.log(err);
+    console.log('There was an error with the GitHub API');
+  }
+}
+// if you want the entire process stop when it runs into a error, you would want them into a try catch block 
+// also if your contacting two apis, you would want to wrapi it up seperatly so that if one works then the other one will pass maybe 
+queryApis();
