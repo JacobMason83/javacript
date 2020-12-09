@@ -34,7 +34,8 @@ function Invoice() {
   this.taxRate = 0.06 // because js wasnt class oriented till a few years ago you can do this 
   this.subTotal = subTotal
   this.total = setInterval(function totalNumbers() {
-    console.log((this.taxRate * this.subTotal) + this.subTotal)
+  console.log((this.taxRate * this.subTotal) + this.subTotal)
+    
   })
 }
 

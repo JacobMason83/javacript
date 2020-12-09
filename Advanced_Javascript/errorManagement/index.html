@@ -1,0 +1,65 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>errors module</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+    <body>
+    
+    </body>
+    <script>
+        class DevcampError extends Error { // in javascript extends brings the error class into devcamperror
+            constructor(msg = 'An error occured', ...params) { // bringing in msg with a default value , and ...params is the rest of them 
+                super(...params) // super is bringing in the resto of the params from the error class /inheriting 
+                
+                this.msg = msg
+                this.name = 'DevcampError'
+
+                
+            }
+        }
+        function siteComponent(func) {
+            return func();
+        }
+        widget = () => {
+            return '<div> Hi there </div>';
+        }
+        try { // setting up the try catch block to fix the error 
+        console.log(siteComponent('oops')) // if you put oops in there the error will throw the catch block console.log
+        } catch(e) {
+          throw new DevcampError(name, e)
+        }
+    </script>
+</html> -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>API Communication Demo</title>
+  </head>
+  <body>
+
+  </body>
+
+  <script>
+    class ApiError extends Error {
+      constructor(...params) {
+        super(params);
+        
+      }
+    }
+    var request = new XMLHttpRequest(); // building a raw rquest to the server 
+    request.open('GET', 'http://api.dailysmarty.com/oops', true); // giving it the enpoint/verb to hit, and if true 
+    request.onload = function() { // when the request loads  then run the function
+      if (request.status >= 200 && request.status < 400) { // if request.status is between 200 and 400 
+        var data = JSON.parse(request.responseText); // then parse the data via json and giving it the response text which is what your getting back 
+        console.log(data);
+      } else {
+        throw new ApiError('ApiError', `error error Will Robinson at ${request.responseText}`);
+      }
+    };
+    request.send(); // calls this api request 
+  </script>
+</html>
