@@ -1,0 +1,12 @@
+Challenge:
+Following the provided mockup use Html, SCSS, and Vanilla JS to create a project that generates a random background color when the button is clicked.
+Requirements:
+- Must contain the title (nav) bar
+- Randomly generated hexadecimal color value
+- The background color must match the given random hex value
+- The current hex value must be shown in plain text
+- Your final product must at least resemble the mockup. 
+Bonus:
+- You should have at least 1 transition / hover effect.
+If you don't finish, it'll be part of your homework
+Have fun, make it your own. 
