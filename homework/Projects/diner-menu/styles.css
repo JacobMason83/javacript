@@ -133,8 +133,12 @@ ul {
   z-index: 3;
 }
 
-.dropdown-content {
+#myDropdown {
   display: none;
+}
+
+.drpdwn {
+  display: block;
   position: absolute;
   background-color: black;
   min-width: 160px;
@@ -144,7 +148,7 @@ ul {
   z-index: 0;
 }
 
-.dropdown-content a {
+.dropdwn a {
   color: white;
   padding: 12px 16px;
   text-decoration: none;
@@ -196,6 +200,7 @@ ul {
 
 /* Modal Content */
 .modal-content {
+  display: none;
   background-color: #fefefe;
   margin: auto;
   padding: 20px;

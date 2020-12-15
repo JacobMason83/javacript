@@ -24,7 +24,7 @@ if (changeColor){
 
         changeColor.style.background = color
         changeColor.innerText = `Magic is everywhere lets test it`
-        hexValue.innerText = `Alakazam.... `
+        hexValue.innerText = `Alakazam....bibbidi-bobbidi-boo `
     })
 }
 

@@ -21,8 +21,8 @@
               <li class="links"><a class="locations-dropdwn">Locations</a></li>
             </ul>
             <div class="dropdown">
-              <button onclick="myFunction()" class="dropbtn">Order Here</button>
-              <div class="" id="myDropdown">
+              <button id="dropBtn" class="dropbtn">Menu</button>
+              <div id="myDropdown" class=''>
                 <a href="#">Breakfast</a>
                 <a href="#">Lunch</a>
                 <a href="#">Dinner</a>
@@ -38,14 +38,14 @@
     <!-- The Modal -->
     <div id="myModal" class="modal">
       <!-- Modal content -->
-      <div class="modal-content">
+      <div class="modal-content" id='modelContent'>
         <span class="close">&times;</span>
         <p>Try the Porter House Steak</p>
       </div>
       <div class="heros-section">
         <h1>Mason's Diner</h1>
         <div id="breakfast">
-          <button onclick="breakBtn()" class="breakbtn">Breakfast Menu</button>
+          <button id="breakBtn" class="breakbtn">Breakfast Menu</button>
           <div class="breakContent" id="myBreakfast">
             <a href="#">
               <h1 class="breakfastPizza">Our Original Breakfast Pizza</h1>
@@ -75,7 +75,7 @@
           </div>
         </div>
         <div id="lunch">
-          <button onclick="lunch()" class="lunchbtn">Lunch Menu</button>
+          <button id="lunchBtn" class="lunchbtn">Lunch Menu</button>
           <div class="lunchContent" id="myLunch">
             <a href="#">
               <h1 class="peppizza">Our Original Pepperoni Pizza</h1>
@@ -101,7 +101,7 @@
           </div>
         </div>
         <div id="dinner">
-          <button onclick="dinner()" class="dinnerbtn">Dinner Menu</button>
+          <button id='dinnerBtn' class="dinnerbtn">Dinner Menu</button>
           <div class="dinnerContent" id="myDinner">
             <a href="#">
               <h1 class="steak">Steak</h1>

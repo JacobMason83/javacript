@@ -109,8 +109,11 @@ ul {
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 3;  
 }
-.dropdown-content {
-    display: none;
+     
+      #myDropdown{display: none;}
+
+        .drpdwn {
+    display: block;
     position: absolute;
     background-color: black;
     min-width: 160px;
@@ -119,7 +122,7 @@ ul {
     z-index: 0;
   }
  
-.dropdown-content a {
+        .dropdwn a {
     color: white;
     padding: 12px 16px;
     text-decoration: none;
@@ -147,6 +150,7 @@ ul {
 .heros-section{
     color:white;
 }
+
 .show {display: block;}
 .display{display: inline-block;}
 
@@ -157,6 +161,7 @@ ul {
 }
 /* Modal Content */
 .modal-content {
+  display: none;
   background-color: #fefefe;
   margin: auto;
   padding: 20px;
@@ -166,6 +171,7 @@ ul {
 
 /* The Close Button */
 .close {
+  
   color: #aaaaaa;
   float: right;
   font-size: 28px;

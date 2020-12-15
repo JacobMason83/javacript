@@ -1,21 +1,47 @@
-    const breakFastMenu = document.getElementById('breakfast')
-    const lunchMenu = document.getElementById('lunch')
-    const dinnerMenu = document.getElementById('dinner')
+    
+    
+    
+    const breakBtn = document.getElementById('breakBtn')
+    const lunchBtn = document.getElementById('lunchBtn')
+    const dinnerBtn = document.getElementById('dinnerBtn')
+    const orderHereBtn = document.getElementById('dropBtn')
     
 
-    const breakBtn = (breakFastMenu) => {
-      const showMenu = document.getElementById(breakFastMenu).classList('breakContent').toggle('.display')
-      
-      window.onclick(event => {
-      const menu = document.createTextNode(newDiv)
-      if(event) {
-      menu.appendChild(showMenu)
-      } else {
-        menu.remove(showMenu)
-      }
-
+    if(orderHereBtn) {
+      orderHereBtn.addEventListener('click', () => {
+        const orderDrpDown = document.getElementById('myDropdown')
+        
+        orderDrpDown.classList.toggle('drpdwn')
       })
     }
+
+    if(breakBtn) {
+      breakBtn.addEventListener('click', () => {
+        const breakFastMenu = document.getElementById('myBreakfast')
+        breakFastMenu.classList.toggle('display')
+      })
+    }
+    if(lunchBtn) {
+      lunchBtn.addEventListener('click', () => {
+        const lunchMenu = document.getElementById('myLunch')
+        lunchMenu.classList.toggle('display')
+      })
+    }
+    if(dinnerBtn) {
+      dinnerBtn.addEventListener('click', () => {
+        const dinnerMenu = document.getElementById('myDinner')
+        dinnerMenu.classList.toggle('display')
+      })
+    }
+
+    const modelBtn = document.getElementById('myBtn')
+    const modelContent = document.getElementById('modelContent')
+
+    if(modelBtn) {
+      modelBtn.addEventListener('click', () => {
+        modelContent.style.display = none
+  })} 
+    
     
     
     
