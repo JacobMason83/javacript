@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+  <meta charset='UTF-8'>
+  <title></title>
+</head>
+
+<style>
+  .hidden {
+    display: none;
+  }
+</style>
+<body>
+
+  <button id="toggleBtn">Toggle Me</button>
+
+  <div id="mainHeading" class="hidden">
+    Hi there
+  </div>
+
+</body>
+
+<script>
+    // toggle is much cleaner than what we havd done by add and removing it 
+    const toggleBtn = document.getElementById('toggleBtn')
+    const heading = document.querySelector('.hidden')
+
+    toggleBtn.addEventListener('click', () => {
+       heading.classList.toggle('hidden') 
+    })
+
+</script>
+</html>

@@ -67,7 +67,7 @@
 </script>
 </html> -->
 
-// onclick vs eventListener
+<!-- // onclick vs eventListener -->
 
 <!DOCTYPE html>
 <html lang='en'>
@@ -78,9 +78,22 @@
 
 <body>
   <div id="dateComponent"></div>
+  <!-- <button onclick="renderDate()"></button>  not industry standard 
+  
+  
+  -->
+  <button class="dateBtn">ClickMe</button>
 </body>
 
 <script>
+  const dateElement = document.getElementById('dateComponent')
+  const dateBtn = document.getElementById('dateBtn')
 
+  // renderDate = () => { not industry standard when your using onclick you have to find the button and set onclick to the funciton
+  //   dateElement.innerHTML = Date() // when using an event listener you have to find the button and it listens for the click 
+  // }
+  dateBtn.addEventListener('click', event => {
+    dateElement.innerText = Date()
+  })
 </script>
 </html>
