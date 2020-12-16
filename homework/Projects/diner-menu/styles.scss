@@ -34,13 +34,13 @@ ul {
   text-align: center;
   padding: 1em;
   text-decoration: none;
-  background: black;
-  color: white;
+  background-color:: #ff8000;
+  color:;
 }
 .links:hover,
 .links:active {
-  color: black;
-  background:#ff8000;
+  color: white;
+  background: black;
 }
 
 .links a {
@@ -118,10 +118,43 @@ ul {
     .heros-section{
     color:white;
    display: flex;
-   justify-content: center;
+   justify-content: flex-start;
    flex-direction: column;
    align-items: center;
+   height: 900px;
 }
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  list-style-type: none;
+} 
+
+
+  .foot-links  {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ff8000;
+    width:10em;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    
+  }
+  .foot-links:hover ,
+  .foot-links:active {
+    color: black;
+    background:#ff8000;
+  }
+  .foot-links a {
+    text-decoration: none;
+    color: white;
+    
+  }
 
 .show {display: block;}
 .display{display: inline-block;}
