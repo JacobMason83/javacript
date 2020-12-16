@@ -13,6 +13,28 @@
 </body>
 
 <script>
+// have to maintain a state with teh character count 
+    const msgInput =document.querySelector('.msgInput')
+    const msgCounter = document.querySelector('.msgCounter')
+    const max = 144 // allows you to maintain state with char count
 
+    // to ensure count 
+    const ensureContentLength = (content, max) => {
+        if (content.length > max) {
+            return false
+        }
+        else {
+            return true
+        }
+    }
+    // event listenter for watch for keyup
+    msgInput.onkeyup = function() { // this is watching the the key inputs and the the reason you use regular function because the aarow only does the event itself not the overall 
+        msgCounter.innerHTML = max - this.value.length
+
+        // cuts off when max length is reached
+        if(!ensureContentLength(this.value, (max - 1))) { // if not ensure content lenght which is the function above, the value of this count and max -1 is to account for one off error
+            msgInput.disabled = true // then disable the input 
+        }
+    }
 </script>
 </html>
