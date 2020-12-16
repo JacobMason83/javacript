@@ -8,14 +8,8 @@ body {
   background: url('https://cdn.wallpapersafari.com/33/50/lTpXNw.jpeg');
 }
 .nav-bar {
-  background: black;
+  // background: black;
   color: white;
-}
-// .nav-bar div {
-//   display: none;
-// }
-.toggle {
-  display: inline-block;
 }
 .nav-wrapper{
     display: flex;
@@ -52,15 +46,11 @@ ul {
 .links a {
   text-decoration: none;
 }
-.toggle {
-  padding: 1em;
-  color: black;
-}
+
 
 .breakbtn,
 .lunchbtn,
-.dinnerbtn,
-.dropbtn {
+.dinnerbtn{
     background-color: #ff8000;
     width:10em;
     color: white;
@@ -71,14 +61,12 @@ ul {
   }
 .breakbtn:hover, .breakbtn:focus,
 .lunchbtn:hover, .lunchbtn:focus,
-.dinnerbtn:hover, .dinnerbtn:focus,
-.dropbtn:hover, .dropbtn:focus {
+.dinnerbtn:hover, .dinnerbtn:focus {
     background-color: black;
   }
   .breakfast,
   .lunch,
-  .dinner, 
-.dropdown {
+  .dinner{
     position: relative;
     display: inline-block;
   }
@@ -108,47 +96,31 @@ ul {
     overflow: auto;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 3;  
-}
-     
-      #myDropdown{display: none;}
-
-        .drpdwn {
-    display: block;
-    position: absolute;
-    background-color: black;
-    min-width: 160px;
-    overflow: auto;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 0;
-  }
- 
-        .dropdwn a {
+}   
+  .breakContent a {
     color: white;
     padding: 12px 16px;
     text-decoration: none;
     display: block;
   }
-  .breakbtn a {
+  .lunchContent a {
     color: white;
     padding: 12px 16px;
     text-decoration: none;
     display: block;
   }
-  .lunchbtn a {
+  .dinnerContent a {
     color: white;
     padding: 12px 16px;
     text-decoration: none;
     display: block;
-  }.dinnerbtn a {
-    color: white;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-  }
-  
-.dropdown a:hover {background-color: #ddd;}
-.heros-section{
+  }  
+    .heros-section{
     color:white;
+   display: flex;
+   justify-content: center;
+   flex-direction: column;
+   align-items: center;
 }
 
 .show {display: block;}
@@ -158,37 +130,4 @@ ul {
     ul {
         display: block;
     }
-}
-/* Modal Content */
-.modal-content {
-  display: none;
-  background-color: #fefefe;
-  margin: auto;
-  padding: 20px;
-  border: 1px solid #888;
-  width: 80%;
-}
-
-/* The Close Button */
-.close {
-  
-  color: #aaaaaa;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-  color: #000;
-  text-decoration: none;
-  cursor: pointer;
-}
-//   <div class="dropdown">
-//   <button onclick="myFunction()" class="dropbtn">Dropdown</button>
-//   <div id="myDropdown" class="dropdown-content">
-//     <a href="#home">Home</a>
-//     <a href="#about">About</a>
-//     <a href="#contact">Contact</a>
-//   </div>
-// </div>
+};

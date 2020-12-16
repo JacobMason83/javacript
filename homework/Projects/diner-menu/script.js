@@ -4,16 +4,10 @@
     const breakBtn = document.getElementById('breakBtn')
     const lunchBtn = document.getElementById('lunchBtn')
     const dinnerBtn = document.getElementById('dinnerBtn')
-    const orderHereBtn = document.getElementById('dropBtn')
+    
     
 
-    if(orderHereBtn) {
-      orderHereBtn.addEventListener('click', () => {
-        const orderDrpDown = document.getElementById('myDropdown')
-        
-        orderDrpDown.classList.toggle('drpdwn')
-      })
-    }
+    
 
     if(breakBtn) {
       breakBtn.addEventListener('click', () => {
