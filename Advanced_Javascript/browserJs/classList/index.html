@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>How to add remove classes</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+    <style>
+        .activeHeading {
+            color:firebrick;
+            font-size: 2em;
+            cursor: pointer;
+        }
+        .nonActiveHeading {
+            color:cornflowerblue;
+            font-size: 4em;
+            cursor: pointer;
+        }
+    </style>
+    </head>
+    <body>
+    <div id="mainHeading" class="activeHeading">
+       Hi There
+    </div>
+    </body>
+    <script>
+        const heading = document.getElementById('mainHeading')
+
+        heading.onclick = () => {
+            if(heading.classList.contains('activeHeading')) { // this will work with a heading with muliple classes so you remove one at at time 
+                heading.classList.remove('activeHeading') // treating this like an array, see if it has this class name, then remove active, add non vice versa
+                heading.classList.add('nonActiveHeading')
+            }
+            else {
+                heading.classList.remove('nonActiveHeading')
+                heading.classList.add('activeHeading')
+            }
+        }
+        // heading.onclick = () => {
+        //     if(heading.classList.contains('activeHeading')) { // this is a bad idea
+        //         heading.className = 'nonActiveHeading'
+        //     }else {
+        //     heading.className ='activeHeading'
+        //     }
+    </script>
+</html

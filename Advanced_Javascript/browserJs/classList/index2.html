@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+  <meta charset='UTF-8'>
+  <title></title>
+
+  <style>
+    .hideElement {
+      visibility: hidden;
+    }
+
+    .showElement {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+    <div class="widget">
+    <div class="mainHeading">
+      <h1>Hi there</h1>
+    </div>
+
+    <div class="subHeading">
+      My Amazing subheading...
+    </div>
+    </div>
+
+
+    <button onclick='contentToggle()'>Toggle Content!!</button>
+</body>
+<script>
+    // const headings = document.querySelectorAll('div') // you dont get a html collection, but you do get a nodeList with all your div classes or ids etc
+    // function contentToggle() {
+    //     headings .forEach(heading => {
+            // if (heading.classList.contains('showElement')) {
+            //     heading.classList.remove('showElement')
+            //     heading.classList.add('hideElement')
+            // } else {
+            //     heading.classList.remove('hideElement')
+            //     heading.classList.add('showElement')
+
+            // }
+    //     })
+    // }
+
+    const widget = document.querySelector('.widget') // query by the div its in 
+
+    function contentToggle() {       
+      if (widget.classList.contains('showElement')) { // checks the div to see if it has showElement class
+        widget.classList.remove('showElement') // then if show is up then remove it 
+        widget.classList.add('hideElement') // and then add hide element 
+       } 
+      else {
+        widget.classList.remove('hideElement')
+        widget.classList.add('showElement')
+            }
+        
+    }
+    
+
+</script>
+</html>

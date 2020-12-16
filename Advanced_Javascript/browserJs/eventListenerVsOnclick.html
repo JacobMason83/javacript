@@ -1,0 +1,86 @@
+<!-- <!DOCTYPE html>
+<html lang='en'>
+<head>
+  <meta charset='UTF-8'>
+  <title></title>
+</head>
+
+<style>
+  img {
+    width: 400px;
+  }
+  .container {
+    position: relative;
+    text-align: center;
+    color: white;
+  }
+  .show-img-overlay {
+    position: relative;
+    bottom: 60px;
+    font-size: 21px;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  .hide-img-overlay {
+    position: relative;
+    bottom: 60px;
+    font-size: 21px;
+    color: transparent;
+  }
+</style>
+<body>
+
+  <div class="container">
+    <img src="https://s3.amazonaws.com/bottega-devcamp/browser-js/laptop.jpg" class="site-img" alt="Laptop">
+    <div class="hide-img-overlay">Image Description</div>
+  </div>
+
+  <div class="container">
+    <img src="https://s3.amazonaws.com/bottega-devcamp/browser-js/another-laptop.jpg" class="site-img" alt="Laptop">
+    <div class="hide-img-overlay">Some Other Image Description</div>
+  </div>
+
+</body>
+
+<script>
+    // const image = document.getElementsByClassName('site-img')[0]// by putting the bracket notation after the site-img itll grab the first one 
+    
+
+    // img.addEventListener('click', (e) => { // e is the event that your waiting to happen which is click 
+
+    // })
+
+    const imgs = document.querySelectorAll('.site-img') // test it out by console logging the images 
+
+    imgs.forEach(img => {
+        img.addEventListener('mouseover', (event) => { // means the mouse is on the target 
+            const captionElement =event.target.parentElement.children[1] // what this is your taking the target picture and then to container,and then the 2nd element in there
+            captionElement.className = 'show-img-overlay'
+        }) // you dont have to pass in event every time, but you can use e 
+    })
+
+    imgs.forEach(img => {
+        img.addEventListener('mouseout', (event) => { // mouseout means that the mouse out of the targets frame
+            const captionElement =event.target.parentElement.children[1] // what this is your taking the target picture and then to container,and then the 2nd element in there
+            captionElement.className = 'hide-img-overlay'
+        }) // you dont have to pass in event every time, but you can use e 
+    })
+</script>
+</html> -->
+
+// onclick vs eventListener
+
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+  <meta charset='UTF-8'>
+  <title></title>
+</head>
+
+<body>
+  <div id="dateComponent"></div>
+</body>
+
+<script>
+
+</script>
+</html>
