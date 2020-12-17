@@ -5,10 +5,15 @@
   <title></title>
 </head>
 <body>
+  
+  <div>
+    Characters left <span class="msgCounter">144</span>
+  </div>
+  
   <input type="text" class="msgInput">
 
   <div>
-    Characters left <span class="msgCounter">144</span>
+    Characters left <span class="tagCounter">20</span>
   </div>
 </body>
 
@@ -16,6 +21,8 @@
 // have to maintain a state with teh character count 
     const msgInput =document.querySelector('.msgInput')
     const msgCounter = document.querySelector('.msgCounter')
+    const tagCounter = document.querySelector('.tagCounter')
+    const tagInput = document.querySelector('.tagInput')
     const max = 144 // allows you to maintain state with char count
 
     // to ensure count 
@@ -27,14 +34,23 @@
             return true
         }
     }
-    // event listenter for watch for keyup
-    msgInput.onkeyup = function() { // this is watching the the key inputs and the the reason you use regular function because the aarow only does the event itself not the overall 
-        msgCounter.innerHTML = max - this.value.length
 
-        // cuts off when max length is reached
-        if(!ensureContentLength(this.value, (max - 1))) { // if not ensure content lenght which is the function above, the value of this count and max -1 is to account for one off error
-            msgInput.disabled = true // then disable the input 
+    const textFieldLengthValidator = (textField, counter, maxCount) => { // this function, allows for shared behavior, if your gonna use it more than once
+      // it would be the functional approach for more use cases, and alot more powerful 
+
+      textField.onkeyup = function() { // this is watching the the key inputs and the the reason you use regular function because the aarow only does the event itself not the overall 
+          counter.innerHTML = maxCount - this.value.length
+    
+          // cuts off when max length is reached
+          if(!ensureContentLength(this.value, (maxCount - 1))) { // if not ensure content lenght which is the function above, the value of this count and max -1 is to account for one off error
+              textField.disabled = true // then disable the input 
+          }
+    
         }
+    // event listenter for watch for keyup
+
     }
+    textFieldLengthValidator(msgInput, msgCounter, 144)
+    textFieldLengthValidator(tagInput, tagCounter, 20)
 </script>
 </html>

@@ -28,19 +28,19 @@
       })
     }
 
-    const modelBtn = document.getElementById('myBtn')
-    const modelContent = document.getElementById('modelContent')
+function orderMenu() {
+  const newWindow = document.createElement('order-window')
+  const newDiv = document.createElement('newDiv')
+}
 
-    if(modelBtn) {
-      modelBtn.addEventListener('click', () => {
-        modelContent.style.display = none
-  })} 
-    
-    
-    
-    
-    
-    
+  //   const modelBtn = document.getElementById('myBtn')
+  //   const modelContent = document.getElementById('modelContent')
+
+  //   if(modelBtn) {
+  //     modelBtn.addEventListener('click', () => {
+  //       modelContent.style.display = none
+  // })} 
+
     /*function alert(){
     //    return alert('Hi there Welcome to Masons Diner, How can i help you today')
     //  }*/

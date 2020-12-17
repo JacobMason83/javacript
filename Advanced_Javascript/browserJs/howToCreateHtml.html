@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+  <meta charset='UTF-8'>
+  <title>how to add elements to html </title>
+</head>
+
+<body>
+  <div class="widget">
+      <input type="text" id="chat-input">
+      <button id="msgBtn" onclick="sendMessage()">Submit</button>
+      <button onclick="clearMessages()">Clear Messages</button>
+  <div id="chat-wrapper"></div>
+    </div>
+</body>
+
+<script>
+    function sendMessage() {
+        const newDiv = document.createElement('div')
+        newDiv.classList.add('chatMsg')
+        let chatInput = document.querySelector("#chat-input").value // this is grabbing the value/what you put into it 
+        const newContent = document.createTextNode(chatInput)
+        newDiv.appendChild(newContent)
+
+        const widget = document.querySelector('.widget')
+        let chatWrapper = document.querySelector('#chat-wrapper')
+        document.querySelector('#chat-input').value = '' // want to make sure when i hit submit it clears out 
+
+        if(document.querySelectorAll('.chatMsg').length > 0){
+            chatWrapper = document.querySelectorAll('.chatMsg')[0]
+        }
+
+        widget.insertBefore(newDiv, chatWrapper) // will insert B4 the button element
+    }
+
+    function clearMessages() {
+        const messages = document.querySelectorAll('.chatMsg')
+        messages.forEach(message => message.remove())
+    }
+</script>
+
+</html>
+
