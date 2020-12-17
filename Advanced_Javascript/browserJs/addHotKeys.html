@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+  <meta charset='UTF-8'>
+  <title></title>
+</head>
+
+<body>
+
+  <input type="text" id="searchBar">
+
+</body>
+
+<script>
+    // with javascript we can use keydown event to listen for specific keys to get to certain things
+    const hotKeys = (e) => {
+        let windowEvent = window.event ? event : e
+
+        if(windowEvent.keyCode === 66 && windowEvent.ctrlKey) { // keycode is a reseved word in the window event object and 66 is the specific code we want to leverage
+           const searchBar = document.querySelector('#searchBar')
+           searchBar.focus() // focus is an event in html, which just means that your just focusing in on the search bar input 
+    }
+}
+    document.onkeydown = hotKeys // be careful, because your using this on the dom itself, and if you have a nother onkeydown, the 
+    // hot key will overwrite it 
+</script>
+
+</html>
