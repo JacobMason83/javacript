@@ -5,8 +5,7 @@ const makeItBig = (str) => {
     const words = str.split('')
     let arr = []
     words.map(word => {
-        
-        let rest = word.slice(1)
+    
         arr.push(word[0].toUpperCase() + word.slice(1).toLowerCase())
     })
     return arr.join('')

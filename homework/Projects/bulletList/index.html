@@ -48,9 +48,10 @@
             
             const wrapper = document.querySelector('.completedTodoWrapper')
              
-             wrapper.insertBefore(e.target, completedToDo)     
+             wrapper.insertBefore(e.target, completedToDo)   
+
+             toDos.remove('click', toDos.removeEventListener)
         }))
-    
        
     }
     addRemoveToDos()
