@@ -37,7 +37,7 @@
         
         // event listener for removing item 
         
-        toDos.forEach(todo => addEventListener('click', (e) => {
+        toDos.forEach(todo => todo.addEventListener('click', (e) => {
             if(e.target === todo){
                 toDos.remove(e.target)
             } else {
@@ -54,6 +54,20 @@
        
     }
     addRemoveToDos()
+
+    // jordons solution 
+
+const todos = document.querySelectorAll('.todoItem');
+const completedTodos = document.querySelector('.completed');
+const completedTodoWrapper = document.querySelector('.completedTodoWrapper');
+
+  todos.forEach(todo => todo.addEventListener('click', (event) => {
+    let completedTodo = document.createElement('li');
+    let todoContent = document.createTextNode(todo.textContent);
+    completedTodo.appendChild(todoContent);
+    completedTodoWrapper.insertBefore(completedTodo, completedTodos);
+    todo.remove();
+  }))
         
 
 
